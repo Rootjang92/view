@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>반응형 iframe 콘텐츠</title>
+  <style>
+    .rwd-container{
+      width: 50%;
+      border: 10px solid #000;
+      /* padding 기준 width값 */
+    }
+    .rwd-iframe-wrapper{
+      position: relative;
+      width: 100;
+      height: 0 !important;
+      padding-top: calc(9/16 * 100%);
+    }
+    .rwd-iframe{
+      /* max-width: 100%; */
+      /* iframe은 높이 auto인식 못함. */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="rwd-container">
+      <div class="rwd-iframe-wrapper">
+        <iframe class="rwd-iframe" width="560" height="315" src="https://www.youtube.com/embed/BkqYCPHc8B8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+  </div>
+</body>
+</html>
